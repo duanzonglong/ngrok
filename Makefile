@@ -21,7 +21,6 @@ assets: client-assets server-assets
 bin/go-bindata:
 	GOOS="" GOARCH="" go get -u github.com/jteeuwen/go-bindata
 	go-bindata -v
-	export PATH=$(PATH):$(GOPATH)/bin
 	ls /usr/local/go/bin
 	ls /go/bin
 
