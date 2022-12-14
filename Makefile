@@ -19,7 +19,7 @@ client: deps
 assets: client-assets server-assets
 
 bin/go-bindata:
-	GOOS="" GOARCH="" go get -u github.com/jteeuwen/go-bindata
+	GOOS="" GOARCH="" go get -u github.com/go-bindata/go-bindata/...
 	go-bindata -v
 	ls /usr/local/go/bin
 	ls /go/bin
