@@ -20,8 +20,8 @@ assets: client-assets server-assets
 
 bin/go-bindata:
 	GOOS="" GOARCH="" go get -u github.com/jteeuwen/go-bindata
-	export PATH=$PATH:$GOPATH/bin
-	ls $GOPATH/bin
+	export PATH=$$PATH:$$GOPATH/bin
+	ls $$GOPATH/bin
 
 client-assets: bin/go-bindata
 	bin/go-bindata -nomemcopy -pkg=assets -tags=$(BUILDTAGS) \
