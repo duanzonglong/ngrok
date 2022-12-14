@@ -19,7 +19,7 @@ client: deps
 assets: client-assets server-assets
 
 bin/go-bindata:
-	GOOS="" GOARCH="" go get https://ghproxy.com/https://github.com/jteeuwen/go-bindata.git
+	GOOS="" GOARCH="" go get github.com/jteeuwen/go-bindata
 
 client-assets: bin/go-bindata
 	bin/go-bindata -nomemcopy -pkg=assets -tags=$(BUILDTAGS) \
